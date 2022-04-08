@@ -23,7 +23,7 @@ const GhibliBox = () => {
     return (
         <div>
             <h1>Ghibli Film</h1>
-            <FilmList />
+            <FilmList films={films}/>
             <FilmDetailBox />
 
         </div>

@@ -1,11 +1,11 @@
 import React from "react";
 
-const FilmCard = () => {
+const FilmCard = ({film}) => {
     
 
 
     return (
-        <p>Film Card</p>
+        <h3>{film.title}</h3>
     )
 }
 
