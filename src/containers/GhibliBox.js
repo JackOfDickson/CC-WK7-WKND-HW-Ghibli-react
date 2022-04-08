@@ -19,11 +19,15 @@ const GhibliBox = () => {
         .then(films => setFilms(films))
     }
 
+    const onFilmSelect = function(film){
+        setSelectedFilm(film)
+    }
+
 
     return (
         <div>
             <h1>Ghibli Film</h1>
-            <FilmList films={films}/>
+            <FilmList films={films} onFilmSelect={onFilmSelect}/>
             <FilmDetailBox />
 
         </div>
