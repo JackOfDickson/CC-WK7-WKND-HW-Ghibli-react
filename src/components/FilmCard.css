@@ -1,4 +1,16 @@
+.film-card {
+    padding: 10px;
+    width:200px;
+    /* height: 450px; */
+}
+
 .film-card>img {
-    width: 300px;
-    height: 450px;
+    width: 200px;
+    height: 300px;
+    border-radius: 25px;
+    box-shadow: 5px 5px cornflowerblue;
+}
+
+.film-card>img:hover {
+    box-shadow: 5px 5px gold;
 }

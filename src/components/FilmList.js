@@ -22,8 +22,7 @@ const FilmList = ({films}) => {
     })
 
     return (
-        <div>
-            <h2>Film List</h2>
+        <div className="film-list">
             {FilmItems}
         </div>
     )

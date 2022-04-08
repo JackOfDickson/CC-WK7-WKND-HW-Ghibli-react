@@ -1,4 +1,5 @@
 import React from "react";
+import './FilmList.css'
 
 const FilmDetail = () => {
 
