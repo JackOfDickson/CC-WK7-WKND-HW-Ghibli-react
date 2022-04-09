@@ -1,12 +1,17 @@
 import React from "react";
 import './FilmCard.css'
 
-const FilmCard = ({film, onFilmSelect}) => {
+const FilmCard = ({film, onFilmSelect, selectedFilm}) => {
 
     const handleClick = () => {
         onFilmSelect(film)
     }
 
+    const selectedFilmClass = () => {
+        if (film.title === selectedFilm.title) {
+            return "selected-film"
+        }
+    }
 
     return (
         <div className="film-card">

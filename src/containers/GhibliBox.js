@@ -27,8 +27,8 @@ const GhibliBox = () => {
     return (
         <div>
             <h1>Ghibli Film</h1>
-            <FilmList films={films} onFilmSelect={onFilmSelect}/>
-            <FilmDetailBox />
+            <FilmList films={films} onFilmSelect={onFilmSelect} selectedFilm={selectedFilm}/>
+            <FilmDetailBox selectedFilm={selectedFilm}/>
 
         </div>
     )

@@ -1,7 +1,7 @@
 import React from "react";
 import FilmCard from "./FilmCard";
 
-const FilmList = ({films, onFilmSelect}) => {
+const FilmList = ({films, onFilmSelect, selectedFilm}) => {
 
     //sort films alpabetically
     films.sort(function (a,b) {
@@ -18,7 +18,7 @@ const FilmList = ({films, onFilmSelect}) => {
     })
 
     const FilmItems = films.map((film, index) => {
-        return <FilmCard film={film} key={index} onFilmSelect={onFilmSelect}/>
+        return <FilmCard film={film} key={index} onFilmSelect={onFilmSelect} selectedFilm={selectedFilm}/>
     })
 
     return (
