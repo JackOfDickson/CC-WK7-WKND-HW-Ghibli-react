@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from "react";
 import FilmDetail from "../components/FilmDetail";
 
-const FilmDetailBox = ({selectedFilm}) => {
+const FilmDetailBox = ({selectedFilm, setSelectedFilm}) => {
+
+    // const fetchPeople
 
 
     return (
-        <div>
-            <FilmDetail selectedFilm={selectedFilm}/>
-        </div>
+            <FilmDetail selectedFilm={selectedFilm} setSelectedFilm={setSelectedFilm}/>
     )
 }
 

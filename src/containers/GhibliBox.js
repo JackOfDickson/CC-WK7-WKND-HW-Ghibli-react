@@ -1,4 +1,5 @@
 import react, {useState, useEffect} from "react"
+import classNames from "classnames"
 import FilmList from "../components/FilmList"
 import FilmDetailBox from "./FilmDetailBox"
 
@@ -23,14 +24,23 @@ const GhibliBox = () => {
         setSelectedFilm(film)
     }
 
+    const contentClass = classNames({
+        "content": selectedFilm
+    })
+
 
     return (
-        <div>
-            <h1>Ghibli Film</h1>
-            <FilmList films={films} onFilmSelect={onFilmSelect} selectedFilm={selectedFilm}/>
-            {selectedFilm ? <FilmDetailBox selectedFilm={selectedFilm}/> : null}
-
-        </div>
+        <>
+            <header>
+                <h1>Ghibli Gallery</h1>
+            </header>
+            <div id={contentClass}>
+                <FilmList films={films} onFilmSelect={onFilmSelect} selectedFilm={selectedFilm}/>
+                {selectedFilm ? 
+                <FilmDetailBox selectedFilm={selectedFilm} setSelectedFilm={setSelectedFilm}/> 
+                : null}
+            </div>
+        </>
     )
 }
 
