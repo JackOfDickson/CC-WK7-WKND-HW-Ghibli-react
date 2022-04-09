@@ -1,5 +1,6 @@
 import React from "react";
-import './FilmCard.css'
+import './FilmCard.css';
+import classNames from "classnames";
 
 const FilmCard = ({film, onFilmSelect, selectedFilm}) => {
 
@@ -7,14 +8,14 @@ const FilmCard = ({film, onFilmSelect, selectedFilm}) => {
         onFilmSelect(film)
     }
 
-    const selectedFilmClass = () => {
-        if (film.title === selectedFilm.title) {
-            return "selected-film"
-        }
-    }
+    const filmClass = classNames("film-card", {
+        "selected-film-card": selectedFilm === film
+    })
+    
+
 
     return (
-        <div className="film-card">
+        <div className={filmClass}>
             {/* <h3>{film.title}</h3> */}
             <p>{film.release_date}</p>
             <img src={film.image} onClick={handleClick}/>
