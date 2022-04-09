@@ -1,12 +1,16 @@
 import React from "react";
-import './FilmList.css'
 
-const FilmDetail = () => {
+const FilmDetail = ({selectedFilm}) => {
+
 
 
     return (
         <div>
-            <h3>Some more details</h3>
+            <h2>{selectedFilm.title}</h2>
+            <p>{selectedFilm.description}</p>
+            <p>Rotten Tomatoes score: {selectedFilm.rt_score}</p>
+
+            
         </div>
     )
 }

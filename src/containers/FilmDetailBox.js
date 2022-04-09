@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import FilmDetail from "../components/FilmDetail";
 
-const FilmDetailBox = () => {
+const FilmDetailBox = ({selectedFilm}) => {
 
 
     return (
         <div>
-            <FilmDetail/>
+            <FilmDetail selectedFilm={selectedFilm}/>
         </div>
     )
 }

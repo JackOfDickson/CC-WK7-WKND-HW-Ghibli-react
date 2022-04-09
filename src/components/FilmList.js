@@ -1,5 +1,6 @@
 import React from "react";
 import FilmCard from "./FilmCard";
+import './FilmList.css';
 
 const FilmList = ({films, onFilmSelect, selectedFilm}) => {
 
