@@ -8,8 +8,10 @@ const FilmCard = ({film, onFilmSelect, selectedFilm}) => {
         onFilmSelect(film)
     }
 
-    const filmClass = classNames("film-card", {
-        "selected-film-card": selectedFilm === film
+    const filmClass = classNames( {
+        "film-card": selectedFilm === null,
+        "film-card-small": selectedFilm != null,
+        "selected-film-card": selectedFilm === film,
     })
     
 
