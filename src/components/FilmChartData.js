@@ -25,7 +25,7 @@ const FilmChartData = ({films}) => {
     })
 
     return (
-        <div>
+        <div id="film-chart">
             <Chart 
                 chartType="BarChart"
                 data={rtChartData}
