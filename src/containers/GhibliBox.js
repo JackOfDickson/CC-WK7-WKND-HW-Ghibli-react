@@ -2,6 +2,7 @@ import react, {useState, useEffect} from "react"
 import classNames from "classnames"
 import FilmList from "../components/FilmList"
 import FilmDetailBox from "./FilmDetailBox"
+import FilmChartData from "../components/FilmChartData"
 
 
 
@@ -40,6 +41,7 @@ const GhibliBox = () => {
                 {selectedFilm ? 
                 <FilmDetailBox selectedFilm={selectedFilm} setSelectedFilm={setSelectedFilm}/> 
                 : null}
+                <FilmChartData films={films}/>
             </div>
         </>
     )
